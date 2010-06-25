@@ -7,6 +7,12 @@
     <%= yield(:head) %>
   </head>
   <body>
+	<div id="user">
+		<%if user_signed_in? %>
+		<%= current_user.email %> |
+		<%= link_to "Logout", destroy_user_session_path %>
+		<%end -%>
+	</div>
     <div id="container">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>

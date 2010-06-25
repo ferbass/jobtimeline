@@ -79,3 +79,25 @@ a {
   font-size: 12px;
   list-style: disc;
 }
+
+#login{
+	width:230px;
+	padding:5px;
+	border:1px dotted #DDDDDD;
+}
+
+input[type=text] {
+width: 200px;
+height:20px;
+border:medium none;
+padding-left:10px;
+background: url("../images/search_field.png") no-repeat  transparent ;
+}
+
+input[type=password] {
+width: 200px;
+height:20px;
+border:medium none;
+padding-left:10px;
+background: url("../images/search_field.png") no-repeat  transparent ;
+}

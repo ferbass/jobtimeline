@@ -1,0 +1,24 @@
+<% title "User Profiles" %>
+<table>
+  <tr>
+    <th>User</th>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Company</th>
+    <th>Location</th>
+  </tr>
+
+    <tr>
+      <td><%=h @user_profile.user_id %></td>
+      <td><%=h @user_profile.name %></td>
+      <td><%=h @user_profile.website %></td>
+      <td><%=h @user_profile.company %></td>
+      <td><%=h @user_profile.location %></td>
+      <td><%= link_to "Show", user_profile %></td>
+      <td><%= link_to "Edit", edit_user_profile_path(user_profile) %></td>
+      <td><%= link_to "Destroy", user_profile, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+
+</table>
+
+<p><%= link_to "New User Profile", new_user_profile_path %></p>

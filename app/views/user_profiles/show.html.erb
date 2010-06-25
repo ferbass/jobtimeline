@@ -1,0 +1,31 @@
+<% title "User Profile" %>
+<% if current_user.id == @user_profile.user_id%>
+<p>
+  <strong>User:</strong>
+  <%=h @user_profile.user.email %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%=h @user_profile.name %>
+</p>
+<p>
+  <strong>Website:</strong>
+  <%=h @user_profile.website %>
+</p>
+<p>
+  <strong>Company:</strong>
+  <%=h @user_profile.company %>
+</p>
+<p>
+  <strong>Location:</strong>
+  <%=h @user_profile.location %>
+</p>
+
+<p>
+
+  <%= link_to "Edit", edit_user_profile_path(@user_profile) %> |
+  <%= link_to "Destroy", @user_profile, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", user_profiles_path %>
+
+</p>
+  <% end %>

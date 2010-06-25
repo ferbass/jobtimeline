@@ -1,0 +1,21 @@
+<% form_for @user_profile do |f| %>
+  <%= f.error_messages %>
+    <%= f.hidden_field :user_id, :value => current_user.id %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+    <%= f.label :website %><br />
+    <%= f.text_field :website %>
+  </p>
+  <p>
+    <%= f.label :company %><br />
+    <%= f.text_field :company %>
+  </p>
+  <p>
+    <%= f.label :location %><br />
+    <%= f.text_field :location %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

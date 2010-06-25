@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  
+  map.resources :user_profiles
   map.devise_for :users
-  #map.root :controller => "application"
+  map.root :controller => "user_profiles", :action => "show"
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
