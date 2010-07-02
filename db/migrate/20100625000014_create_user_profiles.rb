@@ -8,7 +8,7 @@ class CreateUserProfiles < ActiveRecord::Migration
       t.string :location
       t.timestamps
     end
-     add_index :user_profiles, :user_id,      :unique => true
+     add_index :user_profiles, :user_id,  :unique => true
   end
   
   def self.down

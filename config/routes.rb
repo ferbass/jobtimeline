@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :customers
+
   map.resources :user_profiles
   map.devise_for :users
   map.root :controller => "user_profiles", :action => "show"
